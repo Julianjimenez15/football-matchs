@@ -17,9 +17,6 @@ class Navbar extends Component {
     return (
       <nav className="navbar">
         <div className="navbar-container">
-          <div className="navbar-logo">
-            <a href="/">Logo</a>
-          </div>
           <div
             className={`navbar-links ${this.state.isNavOpen ? "active" : ""}`}
           >
