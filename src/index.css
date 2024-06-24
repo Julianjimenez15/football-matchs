@@ -11,3 +11,83 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/*---------------------------------------------------------------------------------*/
+
+.navbar {
+  background-color: green;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar-logo a {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.navbar-links ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links ul li {
+  margin: 0 15px;
+}
+
+.navbar-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-links ul li a:hover {
+  color: #f00; /* Color de hover */
+}
+
+.navbar-toggle {
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: none; /* Ocultar en tamaños grandes */
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #333;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navbar-links.active {
+    transform: translateX(0);
+  }
+
+  .navbar-toggle {
+    display: block;
+    margin-right: 20px;
+  }
+
+  .navbar-toggle i {
+    color: #fff;
+  }
+}
